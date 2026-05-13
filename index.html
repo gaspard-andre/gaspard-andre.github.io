@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --ink: #1a1714;
       --muted: #6b6560;
@@ -16,7 +16,7 @@
       --accent: #2b4a7a;
       --paper: #ffffff;
     }
-
+ 
     body {
       background: var(--bg);
       color: var(--ink);
@@ -26,7 +26,7 @@
       min-height: 100vh;
       padding: 3rem 1.5rem;
     }
-
+ 
     .page {
       max-width: 780px;
       margin: 0 auto;
@@ -35,12 +35,12 @@
       box-shadow: 0 4px 40px rgba(0,0,0,0.08);
       animation: fadeUp 0.7s ease both;
     }
-
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ── HEADER ── */
     header {
       border-bottom: 2px solid var(--ink);
@@ -48,7 +48,7 @@
       margin-bottom: 2rem;
       text-align: center;
     }
-
+ 
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
@@ -56,14 +56,14 @@
       letter-spacing: 0.04em;
       color: var(--ink);
     }
-
+ 
     header .subtitle {
       font-size: 1rem;
       color: var(--muted);
       font-style: italic;
       margin-top: 0.3rem;
     }
-
+ 
     header .contact {
       margin-top: 0.8rem;
       font-size: 0.92rem;
@@ -73,14 +73,14 @@
       flex-wrap: wrap;
       gap: 0.3rem 1.4rem;
     }
-
+ 
     header .contact a {
       color: var(--accent);
       text-decoration: none;
     }
-
+ 
     header .contact a:hover { text-decoration: underline; }
-
+ 
     /* ── SUMMARY ── */
     .summary {
       font-size: 0.97rem;
@@ -92,10 +92,10 @@
       font-style: italic;
       line-height: 1.7;
     }
-
+ 
     /* ── SECTIONS ── */
     section { margin-bottom: 2rem; }
-
+ 
     section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 0.72rem;
@@ -107,10 +107,10 @@
       padding-bottom: 0.4rem;
       margin-bottom: 1.2rem;
     }
-
+ 
     /* ── ENTRIES ── */
     .entry { margin-bottom: 1.4rem; }
-
+ 
     .entry-header {
       display: flex;
       justify-content: space-between;
@@ -118,31 +118,31 @@
       flex-wrap: wrap;
       gap: 0.2rem;
     }
-
+ 
     .entry-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
       font-weight: 700;
     }
-
+ 
     .entry-date {
       font-size: 0.85rem;
       color: var(--muted);
       white-space: nowrap;
     }
-
+ 
     .entry-org {
       font-style: italic;
       color: var(--muted);
       font-size: 0.9rem;
       margin-bottom: 0.4rem;
     }
-
+ 
     ul.bullets {
       list-style: none;
       padding-left: 0;
     }
-
+ 
     ul.bullets li {
       padding-left: 1.2rem;
       position: relative;
@@ -150,14 +150,14 @@
       margin-bottom: 0.2rem;
       color: #3a3530;
     }
-
+ 
     ul.bullets li::before {
       content: "–";
       position: absolute;
       left: 0;
       color: var(--rule);
     }
-
+ 
     /* ── SKILLS & TAGS ── */
     .skills-grid {
       display: grid;
@@ -165,13 +165,13 @@
       gap: 0.35rem 1rem;
       font-size: 0.92rem;
     }
-
+ 
     .skills-grid .label {
       font-weight: 500;
       color: var(--muted);
       white-space: nowrap;
     }
-
+ 
     /* ── PROJECTS ── */
     .project {
       margin-bottom: 0.6rem;
@@ -187,14 +187,25 @@
       font-size: 0.8rem;
       top: 2px;
     }
-
+ 
+    .project-title {
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+ 
+    .project-date {
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+ 
     /* ── PILLS row ── */
     .pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-
+ 
     .pill {
       background: #eef1f7;
       color: var(--accent);
@@ -203,7 +214,22 @@
       font-size: 0.82rem;
       font-family: 'EB Garamond', serif;
     }
-
+ 
+    /* Highlight tag for offer-secured */
+    .tag-highlight {
+      display: inline-block;
+      background: #e8efe0;
+      color: #4a6a2a;
+      font-size: 0.72rem;
+      font-style: normal;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.1rem 0.5rem;
+      margin-left: 0.5rem;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+ 
     /* ── FOOTER ── */
     footer {
       margin-top: 2.5rem;
@@ -214,13 +240,13 @@
       color: var(--rule);
       letter-spacing: 0.08em;
     }
-
+ 
     @media (max-width: 600px) {
       .page { padding: 2.5rem 1.8rem; }
       header h1 { font-size: 2rem; }
       .entry-header { flex-direction: column; }
     }
-
+ 
     @media print {
       body { background: white; padding: 0; }
       .page { box-shadow: none; padding: 2rem; }
@@ -229,110 +255,147 @@
 </head>
 <body>
 <div class="page">
-
+ 
   <header>
     <h1>Gaspard André</h1>
-    <p class="subtitle">BSc Student · Ecole Polytechnique · Machine Learning</p>
     <div class="contact">
       <span>+44 7 774 259 562</span>
       <span>·</span>
       <a href="mailto:gaspard.andre.2028@polytechnique.edu">gaspard.andre.2028@polytechnique.edu</a>
+      <span>·</span>
+      <span>London / Paris</span>
     </div>
   </header>
-
-  <div class="summary">
-    First-Year BSc student at Ecole Polytechnique with hands-on experience building end-to-end machine learning pipelines in Python for time-series and financial data. Seeking internship starting August 2026.
-  </div>
-
+ 
   <!-- EDUCATION -->
   <section>
     <h2>Education</h2>
+ 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Ecole Polytechnique — Bachelor of Science</span>
-        <span class="entry-date">2025 – 2028</span>
+        <span class="entry-title">École Polytechnique — Bachelor of Science</span>
+        <span class="entry-date">Sep 2025 – Jun 2028</span>
       </div>
-      <div class="entry-org">Paris, France</div>
+      <div class="entry-org">Mathematics &amp; Computer Science track · Palaiseau, France</div>
       <ul class="bullets">
-        <li>Specialising in Mathematics, Economics, and Computer Science</li>
-        <li>Relevant courses: Mathematical Modelling, Algorithms &amp; Programming, Mathematical Tools for Economics, Linear Algebra</li>
+        <li>Year 1: Real Analysis, Linear Algebra, Integral Calculus, Numerical Analysis, Algorithms &amp; Programming</li>
+        <li>Year 2 (2026–27): Probability &amp; Statistics, Linear Algebra II, Numerical Analysis II, Machine Learning, C++</li>
+      </ul>
+    </div>
+ 
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Lycée International de Londres Winston Churchill</span>
+        <span class="entry-date">Sep 2023 – Jul 2025</span>
+      </div>
+      <div class="entry-org">London, UK</div>
+      <ul class="bullets">
+        <li>French Baccalauréate — Highest Honours (18/20)</li>
+        <li>Specialities: Mathematics, Physics, Chemistry, Computer Science</li>
       </ul>
     </div>
   </section>
-
+ 
   <!-- EXPERIENCE -->
   <section>
     <h2>Professional Experience</h2>
-
+ 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Machine Learning Intern</span>
-        <span class="entry-date">July 2021 – 2025 (Part-time)</span>
+        <span class="entry-title">
+          BNP Paribas — Global Markets Quantitative Research
+          <span class="tag-highlight">Offer Secured</span>
+        </span>
+        <span class="entry-date">Aug 2026</span>
       </div>
-      <div class="entry-org">TurinTech AI · London, UK</div>
+      <div class="entry-org">Quantitative Research Intern · London, UK</div>
       <ul class="bullets">
-        <li>Developed scripts using NumPy, Pandas, and scikit-learn; communicated model results to engineering teams</li>
-        <li>Implemented full ML pipelines: data cleaning, feature engineering, model selection, and cross-validation</li>
-        <li>Contributed to deploying ML solutions in production environments</li>
+        <li>Selected through direct outreach for an internship under the Co-Head of Global Markets Quantitative Research</li>
       </ul>
     </div>
-
+ 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Data Science Intern</span>
-        <span class="entry-date">June 2023 (1 week)</span>
+        <span class="entry-title">TurinTech AI</span>
+        <span class="entry-date">2021 – 2025</span>
       </div>
-      <div class="entry-org">Eltican AI · London, UK</div>
+      <div class="entry-org">Machine Learning Intern (part-time, school holidays) · London, UK</div>
       <ul class="bullets">
-        <li>Analysed cryptocurrency stock time-series datasets to test predictive models</li>
-        <li>Built regression-based baselines and evaluated model performance under high volatility</li>
-        <li>Explored feature generation and assessed whether predictive signals remained reliable across market conditions</li>
+        <li>Joined at 14 during school holidays; progressively took on production work as skills developed</li>
+        <li>Built end-to-end ML pipelines in Python (NumPy, Pandas, scikit-learn): cleaning, feature engineering, model selection, cross-validation; contributed to production deployments</li>
+      </ul>
+    </div>
+ 
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Eltican AI — Digital Assets</span>
+        <span class="entry-date">Jun 2023</span>
+      </div>
+      <div class="entry-org">Data Science Intern · London, UK</div>
+      <ul class="bullets">
+        <li>Built regression baselines for cryptocurrency time-series prediction; assessed signal reliability across high-volatility regimes</li>
       </ul>
     </div>
   </section>
-
-  <!-- PROJECTS -->
+ 
+  <!-- PROJECTS & COMPETITIONS -->
   <section>
-    <h2>Projects</h2>
-    <div class="project">House-price prediction model using Python &amp; scikit-learn — cross-validated, achieving 85% accuracy</div>
-    <div class="project">Crypto time-series prediction baselines using Python &amp; Pandas — implemented regression models to test predictability</div>
-    <div class="project">Reusable ML pipeline template in Python — preprocessing, feature extraction, train/test split, and model training</div>
+    <h2>Quantitative Projects &amp; Competitions</h2>
+ 
+    <div class="project">
+      <span class="project-title">IMC Prosperity 4 — Global Algorithmic Trading Competition</span>
+      <span class="project-date"> · Apr 2026</span>
+      <div style="margin-top: 0.15rem; color: #3a3530;">
+        Designed Python trading algorithms balancing inventory risk and execution under realistic order-book conditions; ranked top 26% worldwide and 44th in France.
+      </div>
+    </div>
+ 
+    <div class="project">
+      <span class="project-title">AQA Extended Project Qualification (EPQ)</span>
+      <span class="project-date"> · Aug 2024</span>
+      <div style="margin-top: 0.15rem; color: #3a3530;">
+        Independent research dissertation: <em>“The Rise of Quantitative Trading: Reshaping the Traditional Techniques of the Financial World.”</em>
+      </div>
+    </div>
   </section>
-
+ 
   <!-- SKILLS -->
   <section>
     <h2>Technical Skills</h2>
     <div class="skills-grid">
       <span class="label">Programming</span>
-      <span>Python, C, R, SQL</span>
-      <span class="label">ML &amp; Data</span>
-      <span>NumPy, Pandas, scikit-learn, Jupyter, Matplotlib</span>
+      <span>Python (NumPy, Pandas, scikit-learn, Matplotlib, Jupyter), C, R, SQL</span>
+      <span class="label">Quant methods</span>
+      <span>Probability, statistics, linear regression, numerical methods, backtesting</span>
+      <span class="label">Tools</span>
+      <span>Git, Linux/Unix, L<sup>A</sup>T<sub>E</sub>X</span>
     </div>
   </section>
-
+ 
   <!-- LANGUAGES -->
   <section>
     <h2>Languages</h2>
     <div class="pill-row">
-      <span class="pill">French — Native</span>
       <span class="pill">English — Native</span>
+      <span class="pill">French — Native</span>
       <span class="pill">Spanish — A2</span>
-      <span class="pill">Italian — A1</span>
+      <span class="pill">Italian — A2</span>
     </div>
   </section>
-
+ 
   <!-- INTERESTS -->
   <section>
     <h2>Interests</h2>
     <div class="pill-row">
+      <span class="pill">Chess (ECF 1400, School's First Team)</span>
       <span class="pill">Guitar</span>
-      <span class="pill">Chess (School Team)</span>
-      <span class="pill">Football (Club · 4 years)</span>
+      <span class="pill">Football (4 years club level)</span>
     </div>
   </section>
-
+ 
   <footer>Last updated · 2026</footer>
-
+ 
 </div>
 </body>
 </html>
+ 
